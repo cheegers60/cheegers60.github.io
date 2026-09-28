@@ -14,333 +14,189 @@
         }
         :root {
             --primary: #2563eb;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --gray: #6b7280;
+            --primary-dark: #1d4ed8;
+            --light-gray: #f3f4f6;
+            --border-gray: #ddd;
         }
         body {
-            color: var(--dark);
-            background-color: #fff;
             line-height: 1.6;
+            color: #333;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* Header Navigation */
-        header {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            position: sticky;
-            top:0;
-            z-index:99;
-        }
-        .nav-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height:70px;
-        }
-        .logo {
-            font-size:20px;
-            font-weight:bold;
-            color:var(--primary);
-        }
-        .nav-menu a {
-            text-decoration:none;
-            color:var(--dark);
-            margin-left:24px;
-            font-size:15px;
-        }
-        .nav-menu a:hover {
-            color:var(--primary);
+            padding: 0 15px;
         }
         /* Banner */
-        .banner {
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("https://github.com/cheegers60/cheegers60.github.io/blob/main/Negative%20pressure%20valve_1.png?raw=true");
-            background-size:cover;
-            background-position:center;
-            height:480px;
-            display:flex;
-            align-items:center;
-            color:#fff;
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        .banner h1 {
-            font-size:40px;
-            margin-bottom:16px;
+        /* About Section */
+        .about {
+            padding: 50px 0;
         }
-        .banner p {
-            font-size:18px;
-            max-width:600px;
-            margin-bottom:28px;
+        .about h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
         }
-        .btn {
-            display:inline-block;
-            padding:12px 28px;
-            background:var(--primary);
-            color:#fff;
-            text-decoration:none;
+        .about p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        /* Product Gallery */
+        .product-gallery {
+            padding: 50px 0;
+            background-color: var(--light-gray);
+        }
+        .product-gallery h2 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .gallery-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 16px;
+        }
+        .gallery-img {
+            width:100%;
+            height:auto;
             border-radius:4px;
-            border: none;
-            cursor: pointer;
-            font-size:16px;
-        }
-        .btn:hover {
-            background:#1d4ed8;
-        }
-        /* Section Common */
-        section {
-            padding:70px 0;
-        }
-        .section-title {
-            text-align:center;
-            font-size:30px;
-            margin-bottom:48px;
-            position:relative;
-        }
-        .section-title:after {
-            content:"";
-            width:70px;
-            height:3px;
-            background:var(--primary);
-            display:block;
-            margin:12px auto 0;
-        }
-        /* Product Intro */
-        .about-wrap {
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:40px;
-            align-items:center;
-        }
-        .about-img {
-            background:#e5e7eb;
-            height:340px;
-            border-radius:6px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#999;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         /* Specification Table */
-        .table-wrap {
-            overflow-x:auto;
+        .specification {
+            padding: 50px 0;
+        }
+        .specification h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
         }
         table {
             width:100%;
             border-collapse: collapse;
         }
-        table th, table td {
-            border:1px solid #ddd;
-            padding:14px;
-            text-align:center;
-        }
-        table th {
-            background-color:var(--primary);
-            color:#fff;
-        }
-        /* Application */
-        .scene-list {
-            display:grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap:24px;
-        }
-        .scene-item {
-            background:var(--light);
-            padding:30px 20px;
-            text-align:center;
-            border-radius:6px;
-        }
-        /* Contact */
-        .contact-wrap {
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:40px;
-        }
-        .form-item {
-            margin-bottom:18px;
-        }
-        .form-item input, .form-item textarea {
-            width:100%;
+        th,td {
+            border:1px solid var(--border-gray);
             padding:12px;
-            border:1px solid #ddd;
-            border-radius:4px;
-            font-size:15px;
+            text-align:left;
         }
-        textarea {
-            min-height:140px;
-        }
-        /* Footer */
-        footer {
-            background:var(--dark);
+        th {
+            background: var(--primary);
             color:#fff;
-            padding:40px 0;
-            text-align:center;
         }
-        /* Mobile Responsive */
-        @media(max-width:768px){
-            .nav-menu {display:none;}
-            .about-wrap, .contact-wrap {grid-template-columns:1fr;}
-            .scene-list {grid-template-columns: repeat(2,1fr);}
-            .banner h1 {font-size:28px;}
-            .banner {height:360px;}
+        /* Download Area */
+        .download-area {
+            padding:50px 0;
+            text-align:center;
+            background-color: var(--light-gray);
+        }
+        .download-area h2 {
+            color: var(--primary);
+            margin-bottom:16px;
+        }
+        .download-area p {
+            margin-bottom:24px;
+        }
+        .download-btn {
+            display:inline-block;
+            padding:14px 28px;
+            background:var(--primary);
+            color:#fff;
+            text-decoration:none;
+            border-radius:4px;
+            font-weight:bold;
+        }
+        .download-btn:hover {
+            background:var(--primary-dark);
         }
     </style>
 </head>
 <body>
-<!-- Navigation -->
-<header>
-    <div class="container nav-wrap">
-        <div class="logo">CHENGDU CHEEGERS MACHINERY</div>
-        <div class="nav-menu">
-            <a href="#about">Product</a>
-            <a href="#spec">Specifications</a>
-            <a href="#application">Applications</a>
-            <a href="#contact">Contact</a>
+    <!-- Banner -->
+    <section class="banner">
+        <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/banner%20rotary%20airlock%20valve.png?raw=true" alt="Rotary Airlock Valve - CHEEGERS Machinery" class="banner-img">
+    </section>
+
+    <!-- About Us -->
+    <section class="about">
+        <div class="container">
+            <h2>About CHEEGERS</h2>
+            <p>Chengdu Cheegers Machinery Manufacturing Co., Ltd. makes bulk material handling equipment, including rotary airlock valves, diverter valves, slide gate valves and magnetic separators.</p>
+            <p>We have over 60 years of practical experience in rotary airlock valve design and production. We work closely with global partners and offer custom solutions for different bulk material conveying needs.</p>
+            <p>Our CHEEGERS products are sold to more than 30 countries like Germany, UK, Italy, Canada and Southeast Asia. Our rotary airlock valves are precision built with good air sealing performance. We maintain strict quality control and reliable after-sales service, winning trust from customers worldwide.</p>
         </div>
-    </div>
-</header>
-<!-- Banner -->
-<div class="banner">
-    <div class="container">
-        <h1>Rotary Airlock Valve / Star Discharge Valve</h1>
-        <p>CHENGDU CHEEGERS MACHINERY supplies rotary airlock valves for normal pressure, negative pressure, positive pressure & wear-resistant working conditions. Customized design for grain, powder, dust collection & pneumatic conveying system.</p>
-        <a href="#contact" class="btn">Send Inquiry</a>
-    </div>
-</div>
-<!-- Product Introduction -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">Product Overview</h2>
-        <div class="about-wrap">
-            <div class="about-img" style="background:none;">
-                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/rotary%20airlock%20valve%20China%20cheegers%201%20(101).png?raw=true" alt="Rotary Airlock Valve" style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
-            </div>
-            <div>
-                <h3>About CHEEGERS MACHINERY</h3>
-                <p style="margin:16px 0;">CHEEGERS MACHINERY is a professional Rotary Airlock valve manufacturer and expert in rotary airlock valves. We have 58 years of R&D experience, with two production bases covering an area of 20,000 square meters. We are accredited with ISO9001 certification. Our annual production capacity reaches 9490 units and annual turnover exceeds 40 million US dollars. Our major customers include Buhler, COFCO, Sinograin, YIHAI KERRY, SATAKE and more. We also hold ISO9001:2008 QC certification and provide various OEM/ODM services. At present, our products are exported to Australia, Canada and other countries. We have built long-term, stable and sound business relationships with many manufacturers and wholesalers worldwide.</p>
-                <p style="margin:16px 0;">CHEEGERS was restructured in 2003 from the state-owned factory CHIQI founded in 1958. All managers and senior engineers stayed with CHEEGERS, owning more than 54 years of experience in airlock valves. CHEEGERS has established technical communication and cooperation with Switzerland Buhler. For over half a century, CHEEGERS has been dedicated to R&D and manufacturing rotary valves, diverter valves, slide gate valves and magnetic separators for bulk solids conveying, accumulating rich experience in design and production. Through long-term communication and cooperation with overseas manufacturers and customers, combined with abundant domestic and international market experience, Cheegers provides reliable solutions to meet various bulk solids conveying requirements for clients. With strict quality control and complete after-sales service, Cheegers has won consistent recognition from customers. Please feel free to contact us for more details.</p>
-                <ul style="padding-left:20px;margin-top:16px;">
-                    <li>Housing Material: Cast iron, SS304, SS316L, wear-resistant alloy</li>
-                    <li>Sealing: Packing seal / Oil seal optional</li>
-                    <li>Drive: Gear motor, variable speed available</li>
-                    <li>High wear resistant model for abrasive powder</li>
-                    <li>ISO9001 certified, CAD drawings offered</li>
-                </ul>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="product-gallery">
+        <div class="container">
+            <h2>Rotary Airlock Valve On-site Photos</h2>
+            <div class="gallery-row">
+                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/onsite%20rotary%20airlock%201.png?raw=true" alt="Rotary Airlock Valve onsite" class="gallery-img">
+                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/onsite%20rotary%20airlock%202.png?raw=true" alt="Rotary Airlock Valve onsite" class="gallery-img">
+                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/onsite%20rotary%20airlock%203.png?raw=true" alt="Rotary Airlock Valve onsite" class="gallery-img">
+                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/onsite%20rotary%20airlock%204.png?raw=true" alt="Rotary Airlock Valve onsite" class="gallery-img">
+                <img src="https://github.com/cheegers60/cheegers60.github.io/blob/main/onsite%20rotary%20airlock%205.png?raw=true" alt="Rotary Airlock Valve onsite" class="gallery-img">
             </div>
         </div>
-    </div>
-</section>
-<!-- Technical Specifications -->
-<section id="spec" style="background:#f3f4f6;">
-    <div class="container">
-        <h2 class="section-title">Technical Specifications</h2>
-        <div class="table-wrap">
+    </section>
+
+    <!-- Specification Table -->
+    <section class="specification">
+        <div class="container">
+            <h2>Rotary Airlock Valve Specifications</h2>
             <table>
-                <thead>
-                    <tr>
-                        <th>Model</th>
-                        <th>Volume(L/rev)</th>
-                        <th>Speed(r/min)</th>
-                        <th>Motor Power(kW)</th>
-                        <th>Material</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>YJD-06</td>
-                        <td>0.6</td>
-                        <td>24</td>
-                        <td>0.55</td>
-                        <td>Cast Iron / SS304</td>
-                    </tr>
-                    <tr>
-                        <td>YJD-12</td>
-                        <td>1.2</td>
-                        <td>24</td>
-                        <td>0.75</td>
-                        <td>Cast Iron / SS304</td>
-                    </tr>
-                    <tr>
-                        <td>YJD-16</td>
-                        <td>1.6</td>
-                        <td>20</td>
-                        <td>1.1</td>
-                        <td>Cast Iron / SS304 / SS316L</td>
-                    </tr>
-                    <tr>
-                        <td>YJD-20</td>
-                        <td>2.0</td>
-                        <td>20</td>
-                        <td>1.5</td>
-                        <td>Cast Iron / SS304 / SS316L / Wear-resistant</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>Item</th>
+                    <th>Parameter</th>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>Customizable</td>
+                </tr>
+                <tr>
+                    <td>Throughput</td>
+                    <td>0.5 ~ 100 m³/h</td>
+                </tr>
+                <tr>
+                    <td>Housing Material</td>
+                    <td>Cast iron / Stainless steel 304 / 316L</td>
+                </tr>
+                <tr>
+                    <td>Rotor Material</td>
+                    <td>Cast iron / SS304 / SS316L, wear-resistant coating optional</td>
+                </tr>
+                <tr>
+                    <td>Working Temp.</td>
+                    <td>-20℃ ~ 250℃</td>
+                </tr>
+                <tr>
+                    <td>Drive</td>
+                    <td>Gear motor, frequency conversion optional</td>
+                </tr>
+                <tr>
+                    <td>Seal Type</td>
+                    <td>Packing seal / Mechanical seal</td>
+                </tr>
+                <tr>
+                    <td>Application</td>
+                    <td>Pneumatic conveying, dust collection, grain & powder handling</td>
+                </tr>
             </table>
         </div>
-    </div>
-</section>
-<!-- Application Fields -->
-<section id="application">
-    <div class="container">
-        <h2 class="section-title">Application Industries</h2>
-        <div class="scene-list">
-            <div class="scene-item">
-                <h4>Grain Processing</h4>
-                <p>Grain silo, rice & flour conveying and discharging</p>
-            </div>
-            <div class="scene-item">
-                <h4>Dust Collection</h4>
-                <p>Bag filter hopper airlock & ash discharge</p>
-            </div>
-            <div class="scene-item">
-                <h4>Chemical Powder</h4>
-                <p>Powder, calcium powder, plastic pellet conveying</p>
-            </div>
-            <div class="scene-item">
-                <h4>Building Materials</h4>
-                <p>Cement, fly ash, mineral powder discharging</p>
-            </div>
+    </section>
+
+    <!-- Download Catalog -->
+    <section class="download-area">
+        <div class="container">
+            <h2>Product Catalog Download</h2>
+            <p>Click below to download our rotary airlock valve full catalog.</p>
+            <a href="https://github.com/cheegers60/cheegers60.github.io/blob/main/specification%20rotary%20airlock%20valve.pdf?raw=true" class="download-btn" download>Download Catalog PDF</a>
         </div>
-    </div>
-</section>
-<!-- Contact Section -->
-<section id="contact" style="background:#f3f4f6;">
-    <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-wrap">
-            <div>
-                <h3>Request Quotation & Technical Drawings</h3>
-                <p style="margin:14px 0;">Welcome overseas buyers inquiry. We provide rotary airlock valves for normal / negative / positive pressure and wear-resistant conditions.</p>
-                <p>📞 Tel / WhatsApp: <strong>+86 13340983931</strong><br/>
-                📧 Email: <strong>sales@bulkhandle.cn</strong><br/>
-                📍 CHENGDU CHEEGERS MACHINERY CO., LTD, Chengdu, Sichuan, China</p>
-            </div>
-            <!-- Formspree表单，提交询盘直接发到你的邮箱sales@bulkhandle.cn -->
-            <form action="https://formspree.io/f/mleqzrny" method="POST">
-                <div class="form-item">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-item">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
-                </div>
-                <div class="form-item">
-                    <input type="text" name="subject" placeholder="Model / Requirement">
-                </div>
-                <div class="form-item">
-                    <textarea name="message" placeholder="Message: working condition, medium, pressure, temperature, destination country..." required></textarea>
-                </div>
-                <button class="btn" type="submit">Send Inquiry</button>
-            </form>
-        </div>
-    </div>
-</section>
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>©2026 CHENGDU CHEEGERS MACHINERY CO., LTD. All Rights Reserved. Rotary Airlock Valve Manufacturer</p>
-    </div>
-</footer>
+    </section>
 </body>
 </html>
